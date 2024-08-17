@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><Data>
+    <SubjectData FullName="Иванов Иван Иванович" ID="12345">
+        <PassportData ID="1234" SERIES="123456"/>
+        <ContactInformation Email="john.doe@example.com" Phone="+1234567890"/>
+        <Address Street="Ленина, д. 2, кв. 52" City="Москва" PostalCode="12345" Country="Россия"/>
+        <EmploymentInformation EmployerName="TechCorp" Position="Бухгалтер" YearsEmployed="5" AnnualIncome="85000"/>
+        <AdditionalInformation>
+            <MaritalStatus>Married</MaritalStatus>
+            <Dependents>2</Dependents>
+        </AdditionalInformation>
+    </SubjectData>
+    <ApplicationData ID="000001">
+        <ApplicationInformation LoanTerm="48" LoanAmount="200000" RequestedAmount="100000" InterestRate="5.5"/>
+        <Collateral Type="Vehicle" Description="2018 Honda Civic" EstimatedValue="15000"/>
+        <Status>Pending</Status>
+        <Loaners>
+            <ApplicantDetails>
+                <FullName>Иванов Иван Иванович</FullName>
+                <DateOfBirth>1985-05-15</DateOfBirth>
+                <ClientID>12345</ClientID>
+                <INN>772233445566</INN>
+            </ApplicantDetails>
+            <CoApplicantDetails>
+                <FullName>Иванова Анастасия Ивановна</FullName>
+                <DateOfBirth>1986-08-20</DateOfBirth>
+                <ClientID>54321</ClientID>
+                <INN>112233445566</INN>
+            </CoApplicantDetails>
+        </Loaners>
+    </ApplicationData>
+    <SystemData CreationTime="2024-08-15T12:34:56">
+        <CreditScores ClientID="12345" CreditScore="720" CreditBureau="Experian" ScoreDate="2024-08-01"/>
+        <CreditScores ClientID="54321" CreditScore="710" CreditBureau="TransUnion" ScoreDate="2024-08-01"/>
+        <LoanProducts>
+            <Product ID="1" IsSelected="0" Name="Personal Loan" Description="Unsecured personal loan with fixed interest rate">
+                <Params MinAmount="1000" MaxAmount="500000" MinInterestRate="3.5" MaxInterestRate="7.5" MinMonths="12" MaxMonths="60"/>
+                <EligibilityCriteria>
+                    <MinCreditScore>650</MinCreditScore>
+                    <MaxDebtToIncomeRatio>40</MaxDebtToIncomeRatio>
+                </EligibilityCriteria>
+            </Product>
+            <Product ID="2" IsSelected="1" Name="Auto Loan" Description="Loan for purchasing a vehicle">
+                <Params MinAmount="5000" MaxAmount="300000" MinInterestRate="2.0" MaxInterestRate="5.0" MinMonths="24" MaxMonths="72"/>
+                <EligibilityCriteria>
+                    <MinCreditScore>600</MinCreditScore>
+                    <MaxDebtToIncomeRatio>45</MaxDebtToIncomeRatio>
+                </EligibilityCriteria>
+            </Product>
+        </LoanProducts>
+    </SystemData>
+</Data>
